@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   # get '/recipes/:id', to: 'recipes#show', as: 'recipe'
   resources :recipes
-  # resources :chefs
+  get '/signup' , to:'chefs#new'
+  resources :chefs
 end
