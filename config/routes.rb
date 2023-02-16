@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root "pages#home"
+  # get '/recipes', to: 'recipes#index'
+  # get '/recipes/new', to: 'recipes#new'
+
+  # get '/recipes/:id', to: 'recipes#show', as: 'recipe'
+  resources :recipes
+  # resources :chefs
 end
