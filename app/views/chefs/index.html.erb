@@ -1,0 +1,24 @@
+<h1 align="center">Listing all Chefss</h1>
+<h5><%= link_to "Add new Chef", new_chef_path %><h5>
+<% @chef.each do |recipe| %>
+  <div class="row">
+    <div class="col-md-2">
+      <section class="center">
+        
+      </section>
+    </div>
+    <div class="col-md-8 well">
+      <h4><%= link_to recipe.chefname , chef_path(recipe)%></h4>
+      <p><%= truncate(recipe.email, length: 150) %></p>
+      <small><%= pluralize(recipe.recipes.count, "recipe") if recipe.recipes %>
+            </small>
+      <p>
+        <span class="quiet"><small>Created 
+
+        <%= time_ago_in_words(recipe.created_at) %> ago</small></span>
+        <p><%= button_to   "Delete chefs", chef_path(recipe), method: :delete, 
+                        data: {confirm: "Are you sure you want to delete this chef and all associated recipes?"} , class: "btn btn-danger btn-lg" %></p>
+      </p> 
+    </div>
+   </div>
+<% end %>

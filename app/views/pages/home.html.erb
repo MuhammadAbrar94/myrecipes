@@ -1,11 +1,14 @@
 <div class="jumbotron center">
   <h1>Welcome to MyRecipes</h1>
-  <h2>The best recipe sharing app!</h2>
-  <p><%= link_to "Sign up or log in", "signup", class: "btn btn-danger btn-lg" %></p>
+  <p><%= link_to "Sign up", "signup", class: "btn btn-danger btn-lg" %></p>
+  
+  <p><%= link_to "login", "login", class: "btn btn-danger btn-lg" %>  </p> 
   <p><%= link_to "See all the recipes", recipes_path, class: "btn btn-danger btn-lg" %></p>
+  <p><%= link_to "See all the Chefs", chefs_path, class: "btn btn-danger btn-lg" %></p>
+
 </div>
 
-
+<hr>
 <div class="row">
   <div class="col-lg-4">
     <h2>Heading</h2>
